@@ -88,15 +88,12 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/stack/mm-camera-interface/inc \
         $(LOCAL_PATH)/util \
         $(LOCAL_PATH)/HAL3 \
-        $(call project-path-for,qcom-media)/libstagefrighthw \
-        $(call project-path-for,qcom-media)/mm-core/inc \
-        $(TARGET_OUT_HEADERS)/mm-camera-lib/cp/prebuilt
-
-LOCAL_HEADER_LIBRARIES := media_plugin_headers
-LOCAL_HEADER_LIBRARIES += libandroid_sensor_headers
-LOCAL_HEADER_LIBRARIES += libcutils_headers
-LOCAL_HEADER_LIBRARIES += libsystem_headers
-LOCAL_HEADER_LIBRARIES += libhardware_headers
+        hardware/libhardware/include/hardware \
+        hardware/qcom/media-caf-msm8996/libstagefrighthw \
+        hardware/qcom/media-caf-msm8996/mm-core/inc \
+        system/core/include/cutils \
+        system/core/include/system \
+        system/media/camera/include/system
 
 #HAL 1.0 Include paths
 LOCAL_C_INCLUDES += \
@@ -122,7 +119,7 @@ endif
 LOCAL_C_INCLUDES += \
         $(TARGET_OUT_HEADERS)/qcom/display
 LOCAL_C_INCLUDES += \
-        $(call project-path-for,qcom-display)/libqservice
+        hardware/qcom/display-caf-msm8996/libqservice
 LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl libsync
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
