@@ -88,8 +88,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8937 \
-    SnapdragonCamera
+    MiuiCamera
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
